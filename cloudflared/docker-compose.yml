@@ -4,5 +4,11 @@ services:
     container_name: cf-tunnel
     restart: unless-stopped
     command: tunnel --no-autoupdate run --token "${TUNNEL_TOKEN}"
+    networks:
+      - cf_tunnel_net
     env_file:
       - .env
+
+networks:
+  cf_tunnel_net:
+    external: true

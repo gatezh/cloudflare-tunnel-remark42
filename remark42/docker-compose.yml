@@ -7,6 +7,8 @@ services:
     container_name: "remark42.example.com"
     hostname: "remark42.example.com"
     restart: always
+    networks:
+      - cf_tunnel_net #  which networks to attach the container to
 
     logging:
       driver: json-file
@@ -49,3 +51,7 @@ services:
       - ./var:/srv/var
     env_file:
       - .env
+
+networks:
+  cf_tunnel_net:
+    external: true # tells Compose to use the existing Docker network

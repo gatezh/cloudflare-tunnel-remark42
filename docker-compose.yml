@@ -12,3 +12,5 @@ services:
 networks:
   default:
     name: cf_tunnel_net
+  cf_tunnel_net:
+    name: cf_tunnel_net
