@@ -4,8 +4,8 @@ services:
     # as otherwise it would complain for absence of Dockerfile
     build: .
     image: ghcr.io/umputun/remark42:latest
-    container_name: "remark42.example.com"
-    hostname: "remark42.example.com"
+    container_name: "comments.example.com" # ‼️ Change this
+    hostname: "comments.example.com" # ‼️ Change this
     restart: always
     networks:
       - cf_tunnel_net #  which networks to attach the container to
@@ -20,7 +20,7 @@ services:
       - 8080
 
     environment:
-      - REMARK_URL=https://remark42.example.com # ‼️ Change this
+      - REMARK_URL=https://comments.example.com # ‼️ Change this
       - SECRET="${SECRET}"
       - AUTH_ANON=false # Forbid anonymous commenting
       - EMOJI=true
