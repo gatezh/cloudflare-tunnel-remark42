@@ -8,7 +8,7 @@ services:
     hostname: "comments.example.com" # ‼️ Change this
     restart: always
     networks:
-      - cf_tunnel_net #  which networks to attach the container to
+      - remark42_tunnel #  which networks to attach the container to
 
     logging:
       driver: json-file
@@ -53,5 +53,5 @@ services:
       - .env
 
 networks:
-  cf_tunnel_net:
+  remark42_tunnel:
     external: true # tells Compose to use the existing Docker network
