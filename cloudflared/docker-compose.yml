@@ -3,7 +3,7 @@ services:
     image: cloudflare/cloudflared:latest
     container_name: remark42_tunnel
     restart: unless-stopped
-    command: tunnel --no-autoupdate run --token "${TUNNEL_TOKEN}"
+    command: tunnel --no-autoupdate run --token ${TUNNEL_TOKEN}
     networks:
       - remark42_tunnel
     env_file:
