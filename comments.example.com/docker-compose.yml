@@ -21,15 +21,15 @@ services:
 
     environment:
       - REMARK_URL=https://comments.example.com # ‼️ Change this
-      - SECRET="${SECRET}"
+      - SECRET=${SECRET}
       - AUTH_ANON=false # Forbid anonymous commenting
       - EMOJI=true
       # - TIME_ZONE=America/Edmonton # Default America/Chicago
       #
       ## GitHub OAuth
-      - ADMIN_SHARED_ID="${ADMIN_SHARED_ID}"
-      - AUTH_GITHUB_CID="${AUTH_GITHUB_CID}"
-      - AUTH_GITHUB_CSEC="${AUTH_GITHUB_CSEC}"
+      - ADMIN_SHARED_ID=${ADMIN_SHARED_ID}
+      - AUTH_GITHUB_CID=${AUTH_GITHUB_CID}
+      - AUTH_GITHUB_CSEC=${AUTH_GITHUB_CSEC}
       #
       ## Google OAuth
       # - AUTH_GOOGLE_CID
@@ -46,7 +46,7 @@ services:
       ## ⚠️ Enable it only for the initial comment import or for manual backups.
       # Do not leave the server running with the ADMIN_PASSWD set if you don't have an intention
       # to keep creating backups manually!
-      # - ADMIN_PASSWD="${ADMIN_PASSWD}"
+      # - ADMIN_PASSWD=${ADMIN_PASSWD}
     volumes:
       - ./var:/srv/var
     env_file:
