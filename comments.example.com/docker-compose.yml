@@ -24,7 +24,7 @@ services:
       - SECRET="${SECRET}"
       - AUTH_ANON=false # Forbid anonymous commenting
       - EMOJI=true
-      # - TIME_ZONE=America/Edmonton #America/Chicago
+      # - TIME_ZONE=America/Edmonton # Default America/Chicago
       #
       ## GitHub OAuth
       - ADMIN_SHARED_ID="${ADMIN_SHARED_ID}"
