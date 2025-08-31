@@ -22,9 +22,9 @@ services:
     environment:
       - REMARK_URL=https://comments.example.com # ‼️ Change this
       - SECRET=${SECRET}
-      - AUTH_ANON=false # Forbid anonymous commenting
-      - EMOJI=true
       # - TIME_ZONE=America/Edmonton # Default America/Chicago
+      - EMOJI=true
+      - AUTH_ANON=false # Forbid anonymous commenting
       #
       ## GitHub OAuth
       - ADMIN_SHARED_ID=${ADMIN_SHARED_ID}
